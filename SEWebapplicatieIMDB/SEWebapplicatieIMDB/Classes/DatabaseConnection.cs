@@ -10,7 +10,7 @@ namespace SEWebapplicatieIMDB.Classes
     {
 
         protected OracleConnection connection = new OracleConnection();
-        protected string connectionString = "DATA SOURCE=//192.168.15.50:1521/fhictora;PASSWORD=K9k8zLNCO0;USER ID=dbi292421";
+        protected string connectionString = "DATA SOURCE=//192.168.15.50:1521/fhictora;PASSWORD=ZaozMNrus2;USER ID=dbi324529";
 
 
         public DatabaseConnection()

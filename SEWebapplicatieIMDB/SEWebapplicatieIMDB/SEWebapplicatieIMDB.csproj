@@ -255,6 +255,7 @@
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Classes\Account.cs" />
     <Compile Include="Classes\DatabaseConnection.cs" />
     <Compile Include="Classes\DBAccount.cs" />
     <Compile Include="Contact.aspx.cs">

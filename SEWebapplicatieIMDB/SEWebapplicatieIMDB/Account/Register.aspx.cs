@@ -22,7 +22,7 @@ namespace SEWebapplicatieIMDB.Account
            if(BAM.Registreren(newaccount) == true)
            {
                Response.Write("<script type=\"text/javascript\">alert('Registreren is gelukt!');</script>");
-               Response.Redirect("/Site.Master");
+               Response.Redirect("/Default.aspx");
            }
            else
            {

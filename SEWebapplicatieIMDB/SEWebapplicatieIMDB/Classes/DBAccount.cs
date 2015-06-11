@@ -12,13 +12,13 @@ namespace SEWebapplicatieIMDB.Classes
         {
             bool ishetgelukt = false;
 
-            string sql = "INSERT INTO Account(Account_ID,Firstname,Lastname,Gender,Yearofbirth,Country,Postalcode,Email,Rol,Username,Password) VALUES (:FirstName, :LastName, :Gender, :YearOfBirth, :Country, :PostalCode, :Email, :Rol, :UserName, :Password)";
+            string sql = "INSERT INTO DBS2_Account(Account_ID,Firstname,Lastname,Gender,Yearofbirth,Country,Postalcode,Email,Rol,Username,Password) VALUES (:Account_ID,:FirstName, :LastName, :Gender, :YearOfBirth, :Country, :PostalCode, :Email, :Rol, :UserName, :Password)";
             try
             {
 
                 this.Connect();
                 OracleCommand cmd = new OracleCommand(sql, this.connection);
-                cmd.Parameters.Add(new OracleParameter("Account_ID", 100));
+                cmd.Parameters.Add(new OracleParameter("Account_ID", 4));
                 cmd.Parameters.Add(new OracleParameter("FirstName", account.FirstName));
                 cmd.Parameters.Add(new OracleParameter("LastName",account.LastName));
                 cmd.Parameters.Add(new OracleParameter("Gender",account.Gender));

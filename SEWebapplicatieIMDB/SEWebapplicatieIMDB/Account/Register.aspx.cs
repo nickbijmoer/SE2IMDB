@@ -6,25 +6,28 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using SEWebapplicatieIMDB.Models;
+using System.Web.UI.WebControls;
 
 namespace SEWebapplicatieIMDB.Account
 {
-    public partial class Register : Page
+    using System.Threading;
+    public partial class Register : System.Web.UI.Page
     {
+        SEWebapplicatieIMDB.Classes.BusinessAdministration BAM = new Classes.BusinessAdministration();
         protected void CreateUser_Click(object sender, EventArgs e)
         {
-            var manager = new UserManager();
-            var user = new ApplicationUser() { UserName = UserName.Text };
-            IdentityResult result = manager.Create(user, Password.Text);
-            if (result.Succeeded)
-            {
-                IdentityHelper.SignIn(manager, user, isPersistent: false);
-                IdentityHelper.RedirectToReturnUrl(Request.QueryString["ReturnUrl"], Response);
-            }
-            else 
-            {
-                ErrorMessage.Text = result.Errors.FirstOrDefault();
-            }
+          
+         SEWebapplicatieIMDB.Classes.Account newaccount = new Classes.Account(TbFirstName.Text, TbLastName.Text,RbGender.SelectedValue,Convert.ToInt32(TbYearOfBirth.Text),TbCountry.Text,Convert.ToString(TbPostalCode.Text),TbEmail.Text,TbUserName.Text,TbPassword.Text);
+         
+           if(BAM.Registreren(newaccount) == true)
+           {
+               Response.Write("<script type=\"text/javascript\">alert('Registreren is gelukt!');</script>");
+               Response.Redirect("/Site.Master");
+           }
+           else
+           {
+               Response.Write("<script type=\"text/javascript\">alert('Registreren is mislukt!');</script>");
+           }
         }
     }
 }

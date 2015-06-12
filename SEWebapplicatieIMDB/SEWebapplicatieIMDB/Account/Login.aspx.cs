@@ -6,12 +6,14 @@ using System;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
+using SEWebapplicatieIMDB.Classes;
 using SEWebapplicatieIMDB.Models;
 
 namespace SEWebapplicatieIMDB.Account
 {
     public partial class Login : Page
     {
+        BusinessAdministration BAM = new BusinessAdministration();
         protected void Page_Load(object sender, EventArgs e)
         {
             RegisterHyperLink.NavigateUrl = "Register";
@@ -25,22 +27,21 @@ namespace SEWebapplicatieIMDB.Account
 
         protected void LogIn(object sender, EventArgs e)
         {
-            if (IsValid)
+           Account loginGebruiker = BAM.login(TbGebruikersnaam.Text, TbPassword.Text);
+
+            if (User is Admin)
             {
-                // Validate the user password
-                var manager = new UserManager();
-                ApplicationUser user = manager.Find(UserName.Text, Password.Text);
-                if (user != null)
-                {
-                    IdentityHelper.SignIn(manager, user, RememberMe.Checked);
-                    IdentityHelper.RedirectToReturnUrl(Request.QueryString["ReturnUrl"], Response);
-                }
-                else
-                {
-                    FailureText.Text = "Invalid username or password.";
-                    ErrorMessage.Visible = true;
-                }
+                Session[myKeys.key_accountID] = User.AccountID;
+                Session[myKeys.key_rights] = "admin";
             }
+            else if (User is Account)
+            {
+                Session[myKeys.key_accountID] = User.AccountID;
+                Session[myKeys.key_rights] = "user";
+                Console.WriteLine("user");
+            }
+
+            Response.Redirect("/pages/dashboard.aspx");  
         }
     }
 }

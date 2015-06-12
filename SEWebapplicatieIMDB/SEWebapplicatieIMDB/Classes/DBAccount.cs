@@ -8,6 +8,10 @@ namespace SEWebapplicatieIMDB.Classes
 {
     public class DBAccount :DatabaseConnection
     {
+        int account_ID;
+        string gebruikersnaam;
+        string Rol;
+
         public bool Insert(Account account)
         {
             bool ishetgelukt = false;
@@ -44,6 +48,43 @@ namespace SEWebapplicatieIMDB.Classes
             }
 
             return ishetgelukt;
+        }
+
+        public Account Login(string Gebruikersnaam, string Password)
+        {
+            
+
+            string sql = "SELECT account_ID,Gebruikersnaam,Rol FROM DBS2_ACCOUNT WHERE Gebruikersnaam = :Gebruikersnaam AND Password = :Password"; 
+            try
+            {
+
+                this.Connect();
+                OracleCommand cmd = new OracleCommand(sql, this.connection);
+                cmd.Parameters.Add(new OracleParameter("Gebruikersnaam", Gebruikersnaam));
+                cmd.Parameters.Add(new OracleParameter("Password", Password));
+
+                OracleDataReader DataRead = cmd.ExecuteReader();
+
+                if (DataRead.HasRows)
+                {
+                 account_ID   = Convert.ToInt32(reader["ACCOUNT_ID"]);
+                 gebruikersnaam = Convert.ToInt32(reader["GEBRUIKERSNAAM"]);
+                 Rol = Convert.ToInt32(reader["ROL"]);
+
+                Account LoginAccount = new Account(account_ID,gebruikersnaam,Rol);
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                throw;
+            }
+            finally
+            {
+                this.connection.Close();
+            }
+
+            return Loginaccount;
         }
     }
 }

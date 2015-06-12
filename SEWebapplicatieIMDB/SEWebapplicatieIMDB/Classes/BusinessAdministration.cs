@@ -13,5 +13,9 @@ namespace SEWebapplicatieIMDB.Classes
         {
             return this.dbAccount.Insert(newaccount);
         }
+        public Account login(string Gebruikersnaam, string Password)
+        {
+            return this.dbAccount.GebruikerLogin(Account);
+        }
     }
 }

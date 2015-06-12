@@ -7,6 +7,7 @@ namespace SEWebapplicatieIMDB.Classes
 {
     public class Account
     {
+        public int UserID { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Gender { get; set; }
@@ -16,6 +17,7 @@ namespace SEWebapplicatieIMDB.Classes
         public string EMail { get; set; }
         public string UserName { get; set; }
         public string Password { get; set; }
+        public string Rol { get; set; }
 
         public Account(string firstname, string lastname, string gender, int yearofbirth, string country, string postalcode, string email, string username, string password)
         {
@@ -28,6 +30,13 @@ namespace SEWebapplicatieIMDB.Classes
             EMail = email;
             UserName = username;
             Password = password;
+        }
+
+        public Account(int userid, string gebruikersnaam, string rol)
+        {
+            Rol = rol;
+            UserID = userid;
+            UserName = gebruikersnaam;
         }
     }
 }

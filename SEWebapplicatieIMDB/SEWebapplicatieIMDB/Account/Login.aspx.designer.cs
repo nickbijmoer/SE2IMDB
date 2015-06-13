@@ -11,6 +11,7 @@ namespace SEWebapplicatieIMDB.Account {
     
     
     public partial class Login {
+        
         /// <summary>
         /// ErrorMessage control.
         /// </summary>
@@ -19,7 +20,7 @@ namespace SEWebapplicatieIMDB.Account {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.PlaceHolder ErrorMessage;
-      
+        
         /// <summary>
         /// FailureText control.
         /// </summary>
@@ -30,22 +31,22 @@ namespace SEWebapplicatieIMDB.Account {
         protected global::System.Web.UI.WebControls.Literal FailureText;
         
         /// <summary>
-        /// UserName control.
+        /// TbUserName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox UserName;
+        protected global::System.Web.UI.WebControls.TextBox TbUserName;
         
         /// <summary>
-        /// Password control.
+        /// TbPassword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Password;
+        protected global::System.Web.UI.WebControls.TextBox TbPassword;
         
         /// <summary>
         /// RememberMe control.

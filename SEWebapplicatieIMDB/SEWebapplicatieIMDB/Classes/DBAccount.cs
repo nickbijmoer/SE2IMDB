@@ -11,6 +11,7 @@ namespace SEWebapplicatieIMDB.Classes
         int account_ID;
         string gebruikersnaam;
         string Rol;
+        private Account Loginaccount;
 
         public bool Insert(Account account)
         {
@@ -57,7 +58,7 @@ namespace SEWebapplicatieIMDB.Classes
             string sql = "SELECT account_ID,Gebruikersnaam,Rol FROM DBS2_ACCOUNT WHERE Gebruikersnaam = :Gebruikersnaam AND Password = :Password"; 
             try
             {
-
+                
                 this.Connect();
                 OracleCommand cmd = new OracleCommand(sql, this.connection);
                 cmd.Parameters.Add(new OracleParameter("Gebruikersnaam", Gebruikersnaam));
@@ -67,11 +68,11 @@ namespace SEWebapplicatieIMDB.Classes
 
                 if (DataRead.HasRows)
                 {
-                 account_ID   = Convert.ToInt32(reader["ACCOUNT_ID"]);
-                 gebruikersnaam = Convert.ToInt32(reader["GEBRUIKERSNAAM"]);
-                 Rol = Convert.ToInt32(reader["ROL"]);
+                 account_ID   = Convert.ToInt32(DataRead["ACCOUNT_ID"]);
+                 gebruikersnaam = Convert.ToString(DataRead["GEBRUIKERSNAAM"]);
+                 Rol = Convert.ToString(DataRead["ROL"]);
 
-                Account LoginAccount = new Account(account_ID,gebruikersnaam,Rol);
+                Loginaccount = new Account(account_ID,gebruikersnaam,Rol);
                 }
             }
             catch (Exception e)

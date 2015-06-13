@@ -16,32 +16,21 @@ namespace SEWebapplicatieIMDB.Account
         BusinessAdministration BAM = new BusinessAdministration();
         protected void Page_Load(object sender, EventArgs e)
         {
-            RegisterHyperLink.NavigateUrl = "Register";
-            OpenAuthLogin.ReturnUrl = Request.QueryString["ReturnUrl"];
-            var returnUrl = HttpUtility.UrlEncode(Request.QueryString["ReturnUrl"]);
-            if (!String.IsNullOrEmpty(returnUrl))
+            if (!Session[UserID])
             {
-                RegisterHyperLink.NavigateUrl += "?ReturnUrl=" + returnUrl;
+                                
+
             }
         }
 
         protected void LogIn(object sender, EventArgs e)
         {
-           Account loginGebruiker = BAM.login(TbGebruikersnaam.Text, TbPassword.Text);
+           Classes.Account loginGebruiker = BAM.login(TbUserName.Text, TbPassword.Text);
 
-            if (User is Admin)
-            {
-                Session[myKeys.key_accountID] = User.AccountID;
-                Session[myKeys.key_rights] = "admin";
-            }
-            else if (User is Account)
-            {
-                Session[myKeys.key_accountID] = User.AccountID;
-                Session[myKeys.key_rights] = "user";
-                Console.WriteLine("user");
-            }
+           Session["UserID"] = loginGebruiker.UserID;
+           Session["UserName"] = loginGebruiker.UserName;
+           Session["Rol"] = loginGebruiker.Rol;
 
-            Response.Redirect("/pages/dashboard.aspx");  
         }
     }
 }

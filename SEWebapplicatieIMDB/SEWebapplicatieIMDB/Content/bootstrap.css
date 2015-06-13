@@ -1407,6 +1407,7 @@ pre code {
 table {
   max-width: 100%;
   background-color: transparent;
+    margin-left: 30px;
 }
 
 th {
@@ -2641,6 +2642,10 @@ input[type="button"].btn-block {
 
 .glyphicon-align-justify:before {
   content: "\e055";
+}
+
+.RadioButtonList {
+    padding-left: 200px;
 }
 
 .glyphicon-list:before {
@@ -4507,6 +4512,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 
 .navbar-inverse .navbar-brand {
   color: #999999;
+    width: 81px;
 }
 
 .navbar-inverse .navbar-brand:hover,

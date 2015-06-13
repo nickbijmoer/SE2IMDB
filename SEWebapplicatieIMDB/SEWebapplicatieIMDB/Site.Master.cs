@@ -68,12 +68,14 @@ namespace SEWebapplicatieIMDB
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            //litest.Visible = false;
 
         }
 
         protected void Unnamed_LoggingOut(object sender, LoginCancelEventArgs e)
         {
             Context.GetOwinContext().Authentication.SignOut();
+           
         }
     }
 

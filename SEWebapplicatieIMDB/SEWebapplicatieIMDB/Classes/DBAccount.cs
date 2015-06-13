@@ -55,7 +55,7 @@ namespace SEWebapplicatieIMDB.Classes
         {
             
 
-            string sql = "SELECT account_ID,Gebruikersnaam,Rol FROM DBS2_ACCOUNT WHERE Gebruikersnaam = :Gebruikersnaam AND Password = :Password"; 
+            string sql = "SELECT account_ID,Username,Rol FROM DBS2_ACCOUNT WHERE Username = :Gebruikersnaam AND Password = :Password"; 
             try
             {
                 
@@ -69,7 +69,7 @@ namespace SEWebapplicatieIMDB.Classes
                 if (DataRead.HasRows)
                 {
                  account_ID   = Convert.ToInt32(DataRead["ACCOUNT_ID"]);
-                 gebruikersnaam = Convert.ToString(DataRead["GEBRUIKERSNAAM"]);
+                 gebruikersnaam = Convert.ToString(DataRead["UserName"]);
                  Rol = Convert.ToString(DataRead["ROL"]);
 
                 Loginaccount = new Account(account_ID,gebruikersnaam,Rol);

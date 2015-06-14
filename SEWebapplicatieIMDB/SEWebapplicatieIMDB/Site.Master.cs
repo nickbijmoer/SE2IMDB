@@ -68,15 +68,62 @@ namespace SEWebapplicatieIMDB
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            var ctrl = FindControlRecursive(this, "liTest");
-            if (ctrl != null)
+           
+            if (Session["UserID"] == null)
             {
-                ctrl.Visible = false;
+                var ctrl1 = FindControlRecursive(this, "liLogin");
+                if (ctrl1 != null)
+                {
+                    ctrl1.Visible = true;
+                }
+                var ctrl2 = FindControlRecursive(this, "liRegister");
+                if (ctrl2 != null)
+                {
+                    ctrl2.Visible = true;
+                }
+                var ctrl3 = FindControlRecursive(this, "liWelkom");
+                if (ctrl3 != null)
+                {
+                    ctrl3.Visible = false;
+                }
+                var ctrl4 = FindControlRecursive(this, "liLogout");
+                if (ctrl4 != null)
+                {
+                    ctrl4.Visible = false;
+                }
             }
-
-
+            else
+            {
+                var ctrl5 = FindControlRecursive(this, "liLogin");
+                if (ctrl5 != null)
+                {
+                    ctrl5.Visible = false;
+                }
+                var ctrl6 = FindControlRecursive(this, "liRegister");
+                if (ctrl6 != null)
+                {
+                    ctrl6.Visible = false;
+                }
+                var ctrl7 = FindControlRecursive(this, "liWelkom");
+                if (ctrl7 != null)
+                {
+                    ctrl7.Visible = true;
+                }
+                var ctrl8 = FindControlRecursive(this, "liLogout");
+                if (ctrl8 != null)
+                {
+                    ctrl8.Visible = true;
+                }
+            }
         }
 
+     
+        public void LinkButton_Click(Object sender, EventArgs e)
+        {
+            Session.Remove("UserID");
+            Session.RemoveAll();
+            Response.Redirect("/Default.aspx");
+        }
         protected void Unnamed_LoggingOut(object sender, LoginCancelEventArgs e)
         {
             Context.GetOwinContext().Authentication.SignOut();
@@ -95,7 +142,6 @@ namespace SEWebapplicatieIMDB
             }
             return null;
         }
-
    
     }
 

@@ -57,10 +57,12 @@
                     <asp:LoginView runat="server" ViewStateMode="Disabled">
                         <AnonymousTemplate>
                             <ul class="nav navbar-nav navbar-right">
-                                <li><a runat="server" href="~/Account/Register">Register</a></li>
-                                <li><a runat="server" href="~/Account/Login">Log in</a></li>
-                                <li ID="liTest" runat="server">test</></li>
-                                <li ID="liLogout" runat="server">Logout</></li>
+                                <li><a ID="liRegister" runat="server" href="~/Account/Register">Register</a></li>
+                                <li><a ID="liLogin" runat="server" href="~/Account/Login">Log in</a></li>
+                                <li><a ID="liWelkom" runat="server" href="~/Account/Manage">Welkom!</a></li>
+                                <li><asp:LinkButton runat="server" 
+       OnClick="LinkButton_Click" ID="liLogout"  Text="Log Out"></asp:LinkButton></li>
+                               
 
                             </ul>
 

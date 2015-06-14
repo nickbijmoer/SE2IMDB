@@ -68,7 +68,7 @@ namespace SEWebapplicatieIMDB
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            //litest.Visible = false;
+           liLogout
 
         }
 

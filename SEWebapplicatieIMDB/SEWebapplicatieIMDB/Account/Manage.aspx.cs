@@ -10,7 +10,7 @@ namespace SEWebapplicatieIMDB.Account
 {
     public partial class Manage : System.Web.UI.Page
     {
-        BusinessAdministration BAM = new BusinessAdministration();
+        BusinessLayer BAM = new BusinessLayer();
         protected void Page_Load()
         {
             
@@ -21,7 +21,15 @@ namespace SEWebapplicatieIMDB.Account
             if (TbPassword.Text == TbConfirmPassword.Text)
             {
                 int UserID = Convert.ToInt32(Session["UserID"]);
-                BAM.ChangePassword(UserID);
+                bool ishetgelukt = BAM.ChangePassword(UserID, TbPassword.Text);
+                if (ishetgelukt == true)
+                {
+                Response.Write("<script type=\"text/javascript\">alert('Password changed!!');</script>");
+                }
+                else
+                {
+                Response.Write("<script type=\"text/javascript\">alert('Er is iets fout gegaan.');</script>");
+                }
                 
             }
             else

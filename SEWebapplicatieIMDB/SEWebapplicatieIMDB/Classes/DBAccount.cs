@@ -87,5 +87,38 @@ namespace SEWebapplicatieIMDB.Classes
 
             return Loginaccount;
         }
+
+        public bool ChangePassword(int accountid, string password)
+        {
+            bool ishetgelukt = false;
+
+
+
+            string sql = "UPDATE DBS2_ACCOUNT SET Password = nickb WHERE Account_ID = 1;";
+            try
+            {
+
+                this.Connect();
+                OracleCommand cmd = new OracleCommand(sql, this.connection);
+                cmd.Parameters.Add(new OracleParameter("Account_ID", accountid));
+                cmd.Parameters.Add(new OracleParameter("Password", password));
+
+               
+
+                ishetgelukt = true;
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                throw;
+            }
+            finally
+            {
+                this.connection.Close();
+            }
+
+            return ishetgelukt;
+        }
     }
 }

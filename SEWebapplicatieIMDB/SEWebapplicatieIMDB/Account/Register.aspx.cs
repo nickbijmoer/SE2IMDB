@@ -13,7 +13,7 @@ namespace SEWebapplicatieIMDB.Account
     using System.Threading;
     public partial class Register : System.Web.UI.Page
     {
-        SEWebapplicatieIMDB.Classes.BusinessAdministration BAM = new Classes.BusinessAdministration();
+        SEWebapplicatieIMDB.Classes.BusinessLayer BAM = new Classes.BusinessLayer();
         protected void CreateUser_Click(object sender, EventArgs e)
         {
           

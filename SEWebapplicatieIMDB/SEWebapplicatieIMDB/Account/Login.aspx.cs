@@ -14,7 +14,7 @@ namespace SEWebapplicatieIMDB.Account
 {
     public partial class Login : Page
     {
-        BusinessAdministration BAM = new BusinessAdministration();
+        BusinessLayer BAM = new BusinessLayer();
         protected void Page_Load(object sender, EventArgs e)
         {
             

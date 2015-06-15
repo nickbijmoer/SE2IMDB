@@ -93,35 +93,36 @@ namespace SEWebapplicatieIMDB.Classes
             return MovieListTop10;
         }
 
-        public bool DeleteMovie(int MovieID)
-        {
+       public bool DeleteMovie(int MovieID)
+       {
 
 
-            string sql = "DELETE FROM DBS2_MOVIE WHERE MOVIE_ID = :AccountID ";
-            try
-            {
+           string sql = "Delete_DBS2_MOVIE";
+           try
+           {
 
-                this.Connect();
-                OracleCommand cmd = new OracleCommand(sql, this.connection);
-                cmd.Parameters.Add(new OracleParameter("AccountID", MovieID));
-    
+               this.Connect();
+               OracleCommand cmd = new OracleCommand(sql, this.connection);
 
-                OracleDataReader DataRead = cmd.ExecuteReader();
+               cmd.Parameters.Add(new OracleParameter("p_MOVIE_ID", MovieID));
+               cmd.CommandType = System.Data.CommandType.StoredProcedure;
 
-               
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-                throw;
-            }
-            finally
-            {
-                this.connection.Close();
-            }
+               cmd.ExecuteNonQuery();
 
-            return true;
-        }
+
+           }
+           catch (Exception e)
+           {
+               Console.WriteLine(e.Message);
+               throw;
+           }
+           finally
+           {
+               this.connection.Close();
+           }
+
+           return true;
+       }
 
     }
 }

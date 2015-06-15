@@ -22,6 +22,7 @@ namespace SEWebapplicatieIMDB
             int MovieID = Convert.ToInt32(e.CommandArgument);
             if (BL.DeleteMovie(MovieID))
             {
+                
                 Response.Write("<script type=\"text/javascript\">alert('Movie verwijderd!');</script>");
 
             }

@@ -41,7 +41,9 @@
                         <td><%# Eval("Category") %></td>
                     </tr>
                     <tr>
+                        <td>
                         <asp:Button ID="BtnDelete2" runat="server" Text="Delete Movie" OnCommand="BtnDelete2_click" CommandArgument='<%# Eval("Movie_ID") %>' />
+                        </td>
                     </tr>
                 </table>
             </div>

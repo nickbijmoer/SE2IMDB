@@ -12,7 +12,7 @@
                 </SeparatorTemplate>
                 <table>
                     <tr>
-                        <td>Movie :</td>
+                        <td>Movie ID :</td>
                         <td><%# Eval("Movie_ID") %></td>
                     </tr>
                        <tr>

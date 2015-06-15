@@ -31,6 +31,7 @@ namespace SEWebapplicatieIMDB.Classes
                     string Title = Convert.ToString(DataRead["Title"]);
                     int Duration = Convert.ToInt32(DataRead["DURATION"]);
                     double Rating = Convert.ToDouble(DataRead["Rating"]);
+                    Rating = Math.Round(Rating, 2);
                     string Director = Convert.ToString(DataRead["Director"]);
                     int RelatedMovieId = Convert.ToInt32(DataRead["RelatedmovieID"]);
                     string Storyline =  Convert.ToString(DataRead["Storyline"]);
@@ -65,7 +66,7 @@ namespace SEWebapplicatieIMDB.Classes
                 this.Connect();
                 OracleCommand cmd = new OracleCommand(sql, this.connection);
 
-
+                
                 OracleDataReader DataRead = cmd.ExecuteReader();
                 
                 while(DataRead.Read())
@@ -74,6 +75,7 @@ namespace SEWebapplicatieIMDB.Classes
                     string Title = Convert.ToString(DataRead["Title"]);
                     int Duration = Convert.ToInt32(DataRead["DURATION"]);
                     double Rating = Convert.ToDouble(DataRead["Rating"]);
+                    Rating = Math.Round(Rating, 2);
                     string Director = Convert.ToString(DataRead["Director"]);
                     int RelatedMovieId = Convert.ToInt32(DataRead["RelatedmovieID"]);
                     string Storyline = Convert.ToString(DataRead["Storyline"]);

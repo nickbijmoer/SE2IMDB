@@ -1,0 +1,33 @@
+C:\Users\nickbijmoer\Documents\Visual Studio 2013\Projects\SEWebapplicatieIMDB\SE2IMDB\SEWebapplicatieIMDB\Unit test IMDB\bin\Debug\Unit test IMDB.dll
+C:\Users\nickbijmoer\Documents\Visual Studio 2013\Projects\SEWebapplicatieIMDB\SE2IMDB\SEWebapplicatieIMDB\Unit test IMDB\bin\Debug\Unit test IMDB.pdb
+C:\Users\nickbijmoer\Documents\Visual Studio 2013\Projects\SEWebapplicatieIMDB\SE2IMDB\SEWebapplicatieIMDB\Unit test IMDB\bin\Debug\SEWebapplicatieIMDB.dll
+C:\Users\nickbijmoer\Documents\Visual Studio 2013\Projects\SEWebapplicatieIMDB\SE2IMDB\SEWebapplicatieIMDB\Unit test IMDB\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\nickbijmoer\Documents\Visual Studio 2013\Projects\SEWebapplicatieIMDB\SE2IMDB\SEWebapplicatieIMDB\Unit test IMDB\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\nickbijmoer\Documents\Visual Studio 2013\Projects\SEWebapplicatieIMDB\SE2IMDB\SEWebapplicatieIMDB\Unit test IMDB\bin\Debug\System.Web.Optimization.dll
+C:\Users\nickbijmoer\Documents\Visual Studio 2013\Projects\SEWebapplicatieIMDB\SE2IMDB\SEWebapplicatieIMDB\Unit test IMDB\bin\Debug\Owin.dll
+C:\Users\nickbijmoer\Documents\Visual Studio 2013\Projects\SEWebapplicatieIMDB\SE2IMDB\SEWebapplicatieIMDB\Unit test IMDB\bin\Debug\Oracle.DataAccess.dll
+C:\Users\nickbijmoer\Documents\Visual Studio 2013\Projects\SEWebapplicatieIMDB\SE2IMDB\SEWebapplicatieIMDB\Unit test IMDB\bin\Debug\Microsoft.Owin.dll
+C:\Users\nickbijmoer\Documents\Visual Studio 2013\Projects\SEWebapplicatieIMDB\SE2IMDB\SEWebapplicatieIMDB\Unit test IMDB\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\nickbijmoer\Documents\Visual Studio 2013\Projects\SEWebapplicatieIMDB\SE2IMDB\SEWebapplicatieIMDB\Unit test IMDB\bin\Debug\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\nickbijmoer\Documents\Visual Studio 2013\Projects\SEWebapplicatieIMDB\SE2IMDB\SEWebapplicatieIMDB\Unit test IMDB\bin\Debug\Microsoft.AspNet.FriendlyUrls.dll
+C:\Users\nickbijmoer\Documents\Visual Studio 2013\Projects\SEWebapplicatieIMDB\SE2IMDB\SEWebapplicatieIMDB\Unit test IMDB\bin\Debug\Microsoft.Owin.Security.Cookies.dll
+C:\Users\nickbijmoer\Documents\Visual Studio 2013\Projects\SEWebapplicatieIMDB\SE2IMDB\SEWebapplicatieIMDB\Unit test IMDB\bin\Debug\Microsoft.Owin.Security.dll
+C:\Users\nickbijmoer\Documents\Visual Studio 2013\Projects\SEWebapplicatieIMDB\SE2IMDB\SEWebapplicatieIMDB\Unit test IMDB\bin\Debug\EntityFramework.dll
+C:\Users\nickbijmoer\Documents\Visual Studio 2013\Projects\SEWebapplicatieIMDB\SE2IMDB\SEWebapplicatieIMDB\Unit test IMDB\bin\Debug\Microsoft.Owin.Security.OAuth.dll
+C:\Users\nickbijmoer\Documents\Visual Studio 2013\Projects\SEWebapplicatieIMDB\SE2IMDB\SEWebapplicatieIMDB\Unit test IMDB\bin\Debug\Newtonsoft.Json.dll
+C:\Users\nickbijmoer\Documents\Visual Studio 2013\Projects\SEWebapplicatieIMDB\SE2IMDB\SEWebapplicatieIMDB\Unit test IMDB\bin\Debug\SEWebapplicatieIMDB.pdb
+C:\Users\nickbijmoer\Documents\Visual Studio 2013\Projects\SEWebapplicatieIMDB\SE2IMDB\SEWebapplicatieIMDB\Unit test IMDB\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\nickbijmoer\Documents\Visual Studio 2013\Projects\SEWebapplicatieIMDB\SE2IMDB\SEWebapplicatieIMDB\Unit test IMDB\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\nickbijmoer\Documents\Visual Studio 2013\Projects\SEWebapplicatieIMDB\SE2IMDB\SEWebapplicatieIMDB\Unit test IMDB\bin\Debug\System.Web.Optimization.xml
+C:\Users\nickbijmoer\Documents\Visual Studio 2013\Projects\SEWebapplicatieIMDB\SE2IMDB\SEWebapplicatieIMDB\Unit test IMDB\bin\Debug\Microsoft.Owin.xml
+C:\Users\nickbijmoer\Documents\Visual Studio 2013\Projects\SEWebapplicatieIMDB\SE2IMDB\SEWebapplicatieIMDB\Unit test IMDB\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\nickbijmoer\Documents\Visual Studio 2013\Projects\SEWebapplicatieIMDB\SE2IMDB\SEWebapplicatieIMDB\Unit test IMDB\bin\Debug\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\nickbijmoer\Documents\Visual Studio 2013\Projects\SEWebapplicatieIMDB\SE2IMDB\SEWebapplicatieIMDB\Unit test IMDB\bin\Debug\Microsoft.AspNet.FriendlyUrls.xml
+C:\Users\nickbijmoer\Documents\Visual Studio 2013\Projects\SEWebapplicatieIMDB\SE2IMDB\SEWebapplicatieIMDB\Unit test IMDB\bin\Debug\Microsoft.Owin.Security.Cookies.xml
+C:\Users\nickbijmoer\Documents\Visual Studio 2013\Projects\SEWebapplicatieIMDB\SE2IMDB\SEWebapplicatieIMDB\Unit test IMDB\bin\Debug\Microsoft.Owin.Security.xml
+C:\Users\nickbijmoer\Documents\Visual Studio 2013\Projects\SEWebapplicatieIMDB\SE2IMDB\SEWebapplicatieIMDB\Unit test IMDB\bin\Debug\EntityFramework.xml
+C:\Users\nickbijmoer\Documents\Visual Studio 2013\Projects\SEWebapplicatieIMDB\SE2IMDB\SEWebapplicatieIMDB\Unit test IMDB\bin\Debug\Microsoft.Owin.Security.OAuth.xml
+C:\Users\nickbijmoer\Documents\Visual Studio 2013\Projects\SEWebapplicatieIMDB\SE2IMDB\SEWebapplicatieIMDB\Unit test IMDB\bin\Debug\Newtonsoft.Json.xml
+C:\Users\nickbijmoer\Documents\Visual Studio 2013\Projects\SEWebapplicatieIMDB\SE2IMDB\SEWebapplicatieIMDB\Unit test IMDB\obj\Debug\Unit test IMDB.csprojResolveAssemblyReference.cache
+C:\Users\nickbijmoer\Documents\Visual Studio 2013\Projects\SEWebapplicatieIMDB\SE2IMDB\SEWebapplicatieIMDB\Unit test IMDB\obj\Debug\Unit test IMDB.dll
+C:\Users\nickbijmoer\Documents\Visual Studio 2013\Projects\SEWebapplicatieIMDB\SE2IMDB\SEWebapplicatieIMDB\Unit test IMDB\obj\Debug\Unit test IMDB.pdb

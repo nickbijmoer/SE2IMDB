@@ -30,5 +30,15 @@ namespace SEWebapplicatieIMDB.Classes
         {
             return this.dbMovies.GetAllMovies();
         }
+
+        public List<Movie> GetTop10Movies()
+        {
+            return this.dbMovies.GetTop10Movies(); 
+        }
+
+        public bool DeleteMovie(int MovieID)
+        {
+            return this.dbMovies.DeleteMovie(MovieID);
+        }
     }
 }

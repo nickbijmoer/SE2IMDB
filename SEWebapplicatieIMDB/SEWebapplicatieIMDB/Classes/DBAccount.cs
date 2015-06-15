@@ -94,7 +94,7 @@ namespace SEWebapplicatieIMDB.Classes
 
 
 
-            string sql = "UPDATE DBS2_ACCOUNT SET Password = nickb WHERE Account_ID = 1;";
+            string sql = string.Format("Update DBS2_ACCOUNT set Password='{0}' where ACCOUNT_ID={1}", password, accountid);
             try
             {
 

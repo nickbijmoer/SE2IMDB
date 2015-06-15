@@ -1,10 +1,10 @@
-﻿<%@ Page Title="Movies" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Movies.aspx.cs" Inherits="SEWebapplicatieIMDB.Movies" %>
+﻿<%@ Page Title="Top10Movies" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Top10Movies.aspx.cs" Inherits="SEWebapplicatieIMDB.Top10Movies" %>
 <%@ Import Namespace="System.Data" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     
-        <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" SelectMethod="GetAllMovies" TypeName="SEWebapplicatieIMDB.Classes.BusinessLayer"></asp:ObjectDataSource>
-        <asp:Repeater ID="Repeater1" runat="server" DataSourceID="ObjectDataSource1">
+        <asp:ObjectDataSource ID="ObjectDataSource2" runat="server" SelectMethod="GetTop10Movies" TypeName="SEWebapplicatieIMDB.Classes.BusinessLayer"></asp:ObjectDataSource>
+        <asp:Repeater ID="Repeater2" runat="server" DataSourceID="ObjectDataSource2">
         <ItemTemplate>
             <div>
                 <SeparatorTemplate>
@@ -12,7 +12,7 @@
                 </SeparatorTemplate>
                 <table>
                     <tr>
-                        <td>Movie ID</td>
+                        <td>Movie :</td>
                         <td><%# Eval("Movie_ID") %></td>
                     </tr>
                        <tr>
@@ -41,7 +41,7 @@
                         <td><%# Eval("Category") %></td>
                     </tr>
                     <tr>
-                        <asp:Button ID="BtnDelete" runat="server" Text="Delete Movie" OnCommand="BtnDelete_click" CommandArgument='<%# Eval("Movie_ID") %>' />
+                        <asp:Button ID="BtnDelete2" runat="server" Text="Delete Movie" OnCommand="BtnDelete2_click" CommandArgument='<%# Eval("Movie_ID") %>' />
                     </tr>
                 </table>
             </div>

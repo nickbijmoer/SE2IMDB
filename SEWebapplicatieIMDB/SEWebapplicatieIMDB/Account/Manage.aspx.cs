@@ -25,6 +25,7 @@ namespace SEWebapplicatieIMDB.Account
                 if (ishetgelukt == true)
                 {
                 Response.Write("<script type=\"text/javascript\">alert('Password changed!!');</script>");
+                Response.Redirect("/Default.aspx");
                 }
                 else
                 {

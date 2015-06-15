@@ -16,15 +16,28 @@ namespace SEWebapplicatieIMDB
 
         }
 
+        //Delete Movie
         protected void BtnDelete2_click(object sender, CommandEventArgs e)
         {
-            int MovieID = Convert.ToInt32(e.CommandArgument);
-            if (BL.DeleteMovie(MovieID))
+            //If you're not logged in you cant delete a movie
+            if (Session["UserID"] == null)
             {
-                Response.Write("<script type=\"text/javascript\">alert('Movie verwijderd!');</script>");
-                ObjectDataSource2.DataBind();
-                Response.Redirect("/Top10Movies.aspx");
+                Response.Write("<script type=\"text/javascript\">alert('You're not logged in, please log in!');</script>");
 
+            }
+            //If you're logged in you can delete a movie
+            else
+            {
+
+
+                int MovieID = Convert.ToInt32(e.CommandArgument);
+                if (BL.DeleteMovie(MovieID))
+                {
+                    Response.Write("<script type=\"text/javascript\">alert('Movie verwijderd!');</script>");
+                    ObjectDataSource2.DataBind();
+                    Response.Redirect("/Top10Movies.aspx");
+
+                }
             }
         }
     }

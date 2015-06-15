@@ -6,6 +6,7 @@ using Oracle.DataAccess.Client;
 
 namespace SEWebapplicatieIMDB.Classes
 {
+    //DBaccount class is used to create an account, change password or login with an existing account
     public class DBAccount :DatabaseConnection
     {
         int account_ID;
@@ -13,6 +14,8 @@ namespace SEWebapplicatieIMDB.Classes
         string Rol;
         private Account Loginaccount;
 
+
+        //Creates a new Account
         public bool Insert(Account account)
         {
             bool ishetgelukt = false;
@@ -51,6 +54,8 @@ namespace SEWebapplicatieIMDB.Classes
             return ishetgelukt;
         }
 
+
+        //Login with an existing account
         public Account Login(string Gebruikersnaam, string Password)
         {
             
@@ -88,6 +93,7 @@ namespace SEWebapplicatieIMDB.Classes
             return Loginaccount;
         }
 
+        //Is used to change the password of an existing account
         public bool ChangePassword(int accountid, string password)
         {
             bool ishetgelukt = false;

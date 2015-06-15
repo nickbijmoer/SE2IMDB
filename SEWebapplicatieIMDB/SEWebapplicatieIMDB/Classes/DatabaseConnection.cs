@@ -5,6 +5,7 @@ using System.Web;
 
 namespace SEWebapplicatieIMDB.Classes
 {
+    //Databaseconnection class used to make a connection to the database
     using Oracle.DataAccess.Client;
     public class DatabaseConnection
     {

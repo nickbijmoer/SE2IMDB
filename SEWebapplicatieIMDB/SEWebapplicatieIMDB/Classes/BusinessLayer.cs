@@ -5,8 +5,10 @@ using System.Web;
 
 namespace SEWebapplicatieIMDB.Classes
 {
+    //This is the businesslayer, used because I implement the 3 layer structure
     public class BusinessLayer
     {
+   
         private DBAccount dbAccount = new DBAccount();
         private DBMovies dbMovies = new DBMovies();
 
@@ -35,6 +37,7 @@ namespace SEWebapplicatieIMDB.Classes
         {
             return this.dbMovies.GetTop10Movies(); 
         }
+
 
         public bool DeleteMovie(int MovieID)
         {

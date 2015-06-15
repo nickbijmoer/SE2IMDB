@@ -20,14 +20,18 @@ namespace SEWebapplicatieIMDB.Account
             
         }
 
+        //Method called on when you click on login button
         protected void LogIn(object sender, EventArgs e)
         {
+            //Look in database if there is an account with this username and password
            Classes.Account loginGebruiker = BAM.login(TbUserName.Text, TbPassword.Text);
 
+            //If its the wrong data, get a error
             if (loginGebruiker == null)
             {
             Response.Write("<script type=\"text/javascript\">alert('Verkeerde inlog gegevens!');</script>");
             }
+            //if its correct data, store it in a session and redirect to home menu
             else
             {
                 Session["UserID"] = loginGebruiker.UserID;

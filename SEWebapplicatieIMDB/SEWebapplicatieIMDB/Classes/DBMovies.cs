@@ -6,8 +6,11 @@ using Oracle.DataAccess.Client;
 
 namespace SEWebapplicatieIMDB.Classes
 {
+    //This class can get all movies, get top 10 movies or delete movies
     public class DBMovies :DatabaseConnection
     {
+
+        //Get all movies from database
         public List<Movie> GetAllMovies()
         {
 
@@ -50,6 +53,7 @@ namespace SEWebapplicatieIMDB.Classes
             return MovieList;
         }
 
+        //Get top 10 movies from database
        public List<Movie> GetTop10Movies()
         {
 
@@ -93,6 +97,7 @@ namespace SEWebapplicatieIMDB.Classes
             return MovieListTop10;
         }
 
+        //Delete a specific movie from database, using a procedure
        public bool DeleteMovie(int MovieID)
        {
 

@@ -22,6 +22,8 @@ namespace SEWebapplicatieIMDB
             if (BL.DeleteMovie(MovieID))
             {
                 Response.Write("<script type=\"text/javascript\">alert('Movie verwijderd!');</script>");
+                ObjectDataSource2.DataBind();
+                Response.Redirect("/Top10Movies.aspx");
 
             }
         }

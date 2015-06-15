@@ -3,6 +3,8 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     
+
+    
         <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" SelectMethod="GetAllMovies" TypeName="SEWebapplicatieIMDB.Classes.BusinessLayer"></asp:ObjectDataSource>
         <asp:Repeater ID="Repeater1" runat="server" DataSourceID="ObjectDataSource1">
         <ItemTemplate>

@@ -15,6 +15,10 @@ namespace SEWebapplicatieIMDB
         BusinessLayer BL = new BusinessLayer();
         protected void Page_Load(object sender, EventArgs e)
         {
+            
+
+           
+        
         }
 
         protected void BtnDelete_click(object sender, CommandEventArgs e)
@@ -24,8 +28,12 @@ namespace SEWebapplicatieIMDB
             {
                 
                 Response.Write("<script type=\"text/javascript\">alert('Movie verwijderd!');</script>");
+                ObjectDataSource1.DataBind();
+                Response.Redirect("/Movies.aspx");
 
             }
         }
+
+        
     }
 }

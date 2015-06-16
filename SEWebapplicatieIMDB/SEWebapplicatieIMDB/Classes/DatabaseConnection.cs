@@ -11,10 +11,7 @@ namespace SEWebapplicatieIMDB.Classes
     {
 
         protected OracleConnection connection = new OracleConnection();
-        //Athena server 
-        protected string connectionString = "DATA SOURCE=192.168.15.50:1521/fhictora;PASSWORD=dbi324529;USER ID=ZaozMNrus2";
-        //Used for local database, use this if Athena database is not working, i had some trouble with the athena database that i couldnt connect to it with cisco anyconnect
-        //protected string connectionString = "DATA SOURCE=//localhost:1521/xe;PASSWORD=mark;USER ID=mark";
+        protected string connectionString = "DATA SOURCE=//localhost:1521/xe;PASSWORD=mark;USER ID=mark";
 
 
         public DatabaseConnection()
